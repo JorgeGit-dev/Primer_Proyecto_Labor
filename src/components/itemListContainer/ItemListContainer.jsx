@@ -1,6 +1,6 @@
-// En /componentes/ItemListContainer/ItemListContainer.jsx
+// En /componentes/itemListContainer/ItemListContainer.jsx
 import { ItemList } from "./itemList/Itemlist";
-export function ItemListContainer ({ Mensaje }) {
+export function ItemListContainer({ Mensaje }) {
 const productos = [
 { id: '1234', nombre: 'Notebook Pro', descripcion: 'Una laptop potente', precio: 12000, stock: 15 },
 { id: '2344', nombre: 'Monitor Curvo', descripcion: 'Un monitor curvo de 27 pulgadas', precio: 450000, stock: 25 },
