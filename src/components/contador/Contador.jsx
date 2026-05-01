@@ -1,20 +1,37 @@
 // En components/contador/Contador.jsx
 // Importamos 'useState' desde React.
-import { useState } from 'react';
-export function Contador() {
-    const [contador, setContador] = useState(0);
-    const incrementar = () => {
-        setContador(contador + 1); //¡Usamos la función para actualizar el estado!
-    };
-    const decrementar = () => {
-        setContador(contador - 1);
-    };
-    return (
-        <div style={{ margin: '20px', padding: '20px', border: '1px solid black' }}>
-            <h3>Contador de Ejemplo</h3>
-            <p>Valor actual: {contador}</p>
-            <button onClick={incrementar}>Sumar +1</button>
-            <button onClick={decrementar}>Restar -1</button>
-        </div>
-    );
-}
+import { useState } from "react";
+import "./Contador.css";
+
+export const Count = () => {
+  const [count, setCount] = useState(0);
+
+  // Funciones para incrementar y decrementar
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    if (count > 0) {
+      setCount(count - 1);
+    }
+  };
+
+  return (
+    <div className="count-container">
+      <button
+        className="btn primary"
+        onClick={decrement}
+        disabled={count === 0}
+      >
+        -
+      </button>
+
+      <p>Seleccion: {count}</p>
+
+      <button className="btn primary" onClick={increment}>
+        +
+      </button>
+    </div>
+  );
+};

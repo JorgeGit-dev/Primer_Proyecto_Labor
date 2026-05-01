@@ -1,11 +1,18 @@
+// src/ components/ header/ Header.jsx
+
 import logo from "../../assets/react.svg";
 import { Nav } from "../nav/Nav";
 
+import "./Header.css";
+
 export const Header = () => {
   return (
-    <head>
-      <img src={logo} alt="logo react" />
+    <header>
+      <div className="logo-container">
+        <img src={logo} />
+        <span>Reactiva</span>
+      </div>
       <Nav />
-    </head>
+    </header>
   );
 };

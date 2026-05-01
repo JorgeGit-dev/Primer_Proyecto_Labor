@@ -1,0 +1,7 @@
+/* src/ components/ contador/ Contador.css */
+
+.count-container {
+  margin: 2rem;
+  display: flex;
+  gap: 2rem;
+}

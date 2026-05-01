@@ -1,19 +1,24 @@
+// scr/ App.jsx
+
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import { Count } from "./components/contador/Contador";
 import { Footer } from "./components/footer/Footer";
 import { Header } from "./components/header/Header";
+
+import { ItemListContainer } from "./components/itemListContainer/ItemListContainer";
+import { ItemDetailContainer } from "./components/itemDetailContainer/ItemDetailContainer";
 
 function App() {
   return (
     <>
       <Header />
       <main>
-        <h1>Tienda de mascotas</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium,
-          quisquam. Doloribus voluptate vel iure, et illo fugiat error nisi,
-          accusantium, repudiandae voluptatibus doloremque ullam saepe quo
-          aliquid. Qui, quas. Quibusdam?
-        </p>
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/product/:id" element={<ItemDetailContainer />} />
+          <Route path="/carrito" element={<h1>Carrito</h1>} />
+        </Routes>
       </main>
       <Footer />
     </>
