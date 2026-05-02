@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { ItemList } from "../itemList/ItemList";
 
 export const ItemListContainer = () => {
-  const [products, setProducts] = useState([]);
+  const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
 
   //CON LA API FAKESTORE
@@ -29,14 +29,14 @@ export const ItemListContainer = () => {
   useEffect(() => {
     setLoading(true);
 
-    fetch("/data/products.json")
+    fetch("/data/productos.json")
       .then((res) => res.json())
-      .then((data) => setProducts(data))
+      .then((data) => setProductos(data))
       .catch((err) => console.log("Hubo un error:", err))
       .finally(() => setLoading(false));
   }, []);
 
-  console.log(products);
+  console.log(productos);
 
   //SOLO es para ejemplo practico porque aun nos faltan temas por ver: NO ES LA MANERA CORRECTA
   // const arrayProducts = [
@@ -64,7 +64,7 @@ export const ItemListContainer = () => {
       <button onClick={getProducts}>Traer productos</button>
       <button onClick={clearProducts}>Vaciar productos</button> */}
 
-      <ItemList products={products} />
+      <ItemList productos={productos} />
     </section>
   );
 };

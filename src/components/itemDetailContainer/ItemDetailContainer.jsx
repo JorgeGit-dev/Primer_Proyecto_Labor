@@ -11,7 +11,7 @@ export const ItemDetailContainer = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/data/products.json")
+    fetch("/data/productos.json")
       .then((res) => res.json())
       .then((data) => {
         const item = data.find((element) => String(element.id) === id);

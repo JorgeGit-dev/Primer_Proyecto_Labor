@@ -2,7 +2,7 @@
 
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Count } from "./components/contador/Contador";
+import { Contador } from "./components/contador/Contador";
 import { Footer } from "./components/footer/Footer";
 import { Header } from "./components/header/Header";
 
@@ -16,7 +16,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
-          <Route path="/product/:id" element={<ItemDetailContainer />} />
+          <Route path="/producto/:id" element={<ItemDetailContainer />} />
           <Route path="/carrito" element={<h1>Carrito</h1>} />
         </Routes>
       </main>

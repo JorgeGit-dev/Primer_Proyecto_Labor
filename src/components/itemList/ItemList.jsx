@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 import { Item } from "../item/Item";
 import "./ItemList.css";
 
-export const ItemList = ({ products }) => {
-  if (!products.length) {
+export const ItemList = ({ productos }) => {
+  if (!productos.length) {
     return <p>No hay productos</p>;
   }
 
   return (
     <div className="products-container">
-      {products.map((product) => (
-        <Link to={`/product/${product.id}`} key={product.id}>
-          <Item {...product} />
+      {productos.map((producto) => (
+        <Link to={`/producto/${producto.id}`} key={producto.id}>
+          <Item {...producto} />
         </Link>
       ))}
     </div>
