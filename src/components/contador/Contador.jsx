@@ -3,17 +3,17 @@
 import { useState } from "react";
 import "./Contador.css";
 
-export const Count = () => {
-  const [count, setCount] = useState(0);
+export const Contador = () => {
+  const [contador, setContador] = useState(0);
 
   // Funciones para incrementar y decrementar
   const increment = () => {
-    setCount(count + 1);
+    setContador(contador + 1);
   };
 
   const decrement = () => {
-    if (count > 0) {
-      setCount(count - 1);
+    if (contador > 0) {
+      setContador(contador - 1);
     }
   };
 
@@ -22,12 +22,12 @@ export const Count = () => {
       <button
         className="btn primary"
         onClick={decrement}
-        disabled={count === 0}
+        disabled={contador === 0}
       >
         -
       </button>
 
-      <p>Seleccion: {count}</p>
+      <p>Seleccion: {contador}</p>
 
       <button className="btn primary" onClick={increment}>
         +
