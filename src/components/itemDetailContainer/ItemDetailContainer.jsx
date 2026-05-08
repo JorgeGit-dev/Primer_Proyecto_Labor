@@ -11,6 +11,8 @@ export const ItemDetailContainer = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
+
     fetch("/data/productos.json")
       .then((res) => res.json())
       .then((data) => {
@@ -24,7 +26,7 @@ export const ItemDetailContainer = () => {
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
-  }, []);
+  }, [id]);
 
   if (loading) return <p>Cargando...</p>;
   if (!itemDetail) return <p>Producto no encontrado</p>;
