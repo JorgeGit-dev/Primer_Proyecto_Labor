@@ -1,6 +1,6 @@
 // src/ components/ itemListContainer/ ItemListContainer.jsx
 
-import "./ItemListContainer.module.css";
+import "./ItemListContainer.css";
 import { useEffect, useState } from "react";
 import { ItemList } from "../itemList/ItemList";
 
@@ -24,11 +24,11 @@ export const ItemListContainer = () => {
   if (loading) return <p>Cargando...</p>;
 
   return (
-    <section className="product">
+    <section className="item-list-container">
       <button onClick={getProducts}>Traer productos</button>
       <button onClick={clearProducts}>Vaciar productos</button>
 
-      <ItemList lista={products} />
+      <ItemList lista={productos} />
     </section>
 
   );

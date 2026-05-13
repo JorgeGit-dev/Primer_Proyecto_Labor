@@ -6,3 +6,9 @@ header {
   justify-content: space-between;
   padding: 2rem;
 }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
